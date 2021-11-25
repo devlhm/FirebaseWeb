@@ -1,0 +1,26 @@
+{
+  "name": "firebaseweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlhm/FirebaseWeb.git"
+  },
+  "author": "Luis Henrique",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devlhm/FirebaseWeb/issues"
+  },
+  "homepage": "https://github.com/devlhm/FirebaseWeb#readme",
+  "dependencies": {
+    "firebase": "^9.5.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.64.3",
+    "webpack-cli": "^4.9.1"
+  }
+}
