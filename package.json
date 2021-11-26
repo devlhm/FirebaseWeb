@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/devlhm/FirebaseWeb#readme",
   "dependencies": {
-    "firebase": "^9.5.0"
+    "firebase": "^9.4.0"
   },
   "devDependencies": {
     "webpack": "^5.64.3",

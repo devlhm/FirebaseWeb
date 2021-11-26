@@ -1,3 +1,9 @@
-#form-bg > h1 {
-    color: white
+* {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+	background-color: rgb(205, 209, 142);
 }
