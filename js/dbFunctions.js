@@ -5,15 +5,15 @@ import { getFirestore } from "firebase/firestore";
 const db = getFirestore(app)
 
 function getAll() {
-	const q = query(collection(db, "usuarios"));
-	const querySnapshot = getDocs(q).then(
-        querySnapshot.forEach((doc) => {
-            const data = doc.data();
-            document.getElementById("tabela-pessoas").innerHTML +=
-            `<tr><th scope="row">1</th><td>${data.nome}</td><td>${data.cpf}</td><td>@mdo</td></tr>`
-            console.log(doc.id, " => ", doc.data());
-        })
-    );
+	query(collection(db, "usuarios")).then(q => {
+        getDocs(q).then(querySnapshot => querySnapshot.forEach((doc) => {
+                const data = doc.data();
+                document.getElementById("tabela-pessoas").innerHTML +=
+                `<tr><th scope="row">1</th><td>${data.nome}</td><td>${data.cpf}</td><td>@mdo</td></tr>`
+                console.log(doc.id, " => ", doc.data());
+            })
+        );
+    });
 }
 
 function insert(data) {
