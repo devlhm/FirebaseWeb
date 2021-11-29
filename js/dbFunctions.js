@@ -8,7 +8,9 @@ function getAll() {
 	const q = query(collection(db, "usuarios"));
 	const querySnapshot = getDocs(q).then(
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
+            const data = doc.data();
+            document.getElementById("tabela-pessoas").innerHTML +=
+            `<tr><th scope="row">1</th><td>${data.nome}</td><td>${data.cpf}</td><td>@mdo</td></tr>`
             console.log(doc.id, " => ", doc.data());
         })
     );

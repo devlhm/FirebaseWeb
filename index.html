@@ -21,8 +21,8 @@
 	</head>
 
 	<body>
-		<div class="container p-3">
-			<h1 class="text-center">Cadastro Social</h1>
+		<div class="container p-3" id="menu-cadastrar">
+			<h1 class="text-center text-white">Cadastro Social</h1>
 
 			<div id="form-bg" class="p-2 bg-dark rounded-3">
 				<form class="p-3 bg-dark">
@@ -179,13 +179,53 @@
 						</div>
 					</div>
 
-					<div class="container mt-5">
+					<div id="btns-inserir" class="container mt-5">
 						<button id="btn-insert" class="btn mx-2 btn-primary">Inserir</button>
-						<button class="btn mx-2 btn-primary">Listar</button>
+						<button id="btn-listar" class="btn mx-2 btn-primary">Listar</button>
 						<button class="btn mx-2 btn-secondary">Editar</button>
 						<button class="btn mx-2 btn-warning">Excluir</button>
 					</div>
+
+					<div id="btns-editar" class="container mt-5 d-none">
+						<button id="btn-insert" class="btn mx-2 btn-primary">Atualizar</button>
+					</div>
 				</form>
+			</div>
+		</div>
+
+		<div class="container p-3 d-none" id="menu-listar">
+			<h1 class="text-center text-white">Cadastro Social</h1>
+
+			<div id="form-bg" class="p-2 bg-dark rounded-3">
+				<table class="table table-light table-hover">
+					<thead>
+						<tr>
+						  <th scope="col">#</th>
+						  <th scope="col">First</th>
+						  <th scope="col">Last</th>
+						  <th scope="col">Handle</th>
+						</tr>
+					  </thead>
+					  <tbody id="tabela-pessoas">
+						<tr>
+						  <th scope="row">1</th>
+						  <td>Mark</td>
+						  <td>Otto</td>
+						  <td>@mdo</td>
+						</tr>
+						<tr>
+						  <th scope="row">2</th>
+						  <td>Jacob</td>
+						  <td>Thornton</td>
+						  <td>@fat</td>
+						</tr>
+						<tr>
+						  <th scope="row">3</th>
+						  <td colspan="2">Larry the Bird</td>
+						  <td>@twitter</td>
+						</tr>
+					  </tbody>
+				</table>
 			</div>
 		</div>
 	</body>
