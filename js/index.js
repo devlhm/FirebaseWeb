@@ -45,9 +45,20 @@ function getFields() {
 
 function onBtnInsertClick(event) {
 	event.preventDefault();
+	var inputs = document.querySelectorAll("#menu-cadastrar input.validate");
+	let valid = true
+	inputs.forEach(input => {
+		if(!input.checkValidity()) {
+			valid = false;
+		}
+	})
+
+	if(!valid) {
+		alert("Preencha todos os campos necessários!");
+		return
+	}
 
 	insert(getFields());
-
 	document.getElementById("menu-cadastrar").reset();
 }
 
@@ -58,6 +69,7 @@ async function onBtnExcluirClick(event) {
 	console.log(entries);
 	if (entries.length > 0)
 		if (confirm("Deseja excluir o(s) registro(s) selecionado(s)?")) {
+
 			for (const entry of entries) {
 				if (entry.checked)
 					await deleteEntry(entry.parentNode.parentNode.id);
@@ -97,7 +109,7 @@ async function onBtnEditarClick(event) {
 	hideMenu("menu-listar");
 	hideMenu("btn-insert");
 	showMenu("btn-update");
-	editingId = event.target.parentNode.parentNode.id
+	editingId = event.target.parentNode.parentNode.id;
 	await fillFields(editingId);
 }
 

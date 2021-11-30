@@ -46,9 +46,10 @@
 					<div class="form-group form-floating col">
 						<input
 							type="text"
-							class="form-control row"
+							class="form-control row validate"
 							name="nome"
 							id="nome"
+							required
 						/>
 						<label for="nome">Nome</label>
 					</div>
@@ -59,9 +60,10 @@
 					>
 						<input
 							type="text"
-							class="form-control row"
+							class="form-control row validate"
 							name="cpf"
 							id="cpf"
+							required
 						/>
 						<label for="cpf">CPF</label>
 					</div>
@@ -71,9 +73,10 @@
 					>
 						<input
 							type="date"
-							class="row form-control"
+							class="row form-control validate"
 							name="data"
 							id="data_nascimento"
+							required
 						/>
 						<label for="data">Data de Nascimento</label>
 					</div>
@@ -137,9 +140,10 @@
 					>
 						<input
 							type="number"
-							class="row form-control"
+							class="row form-control validate"
 							name="rendaMensal"
 							id="renda_mensal"
+							required
 						/>
 						<label for="rendaMensal">Renda Mensal</label>
 					</div>
@@ -153,9 +157,10 @@
 					>
 						<input
 							type="text"
-							class="form-control row"
+							class="form-control row validate"
 							name="logradouro"
 							id="logradouro"
+							required
 						/>
 						<label for="logradouro">Logradouro</label>
 					</div>
@@ -164,9 +169,10 @@
 					>
 						<input
 							type="number"
-							class="form-control row"
+							class="form-control row validate"
 							name="numero"
 							id="numero_endereco"
+							required
 						/>
 						<label for="numero">Número</label>
 					</div>
@@ -192,7 +198,7 @@
 							name="estado"
 							id="estado"
 						>
-							<option value="SP">São Paulo</option>
+							<option value="SP" selected>São Paulo</option>
 							<option value="MG">Minas Gerais</option>
 							<option value="RJ">Rio de Janeiro</option>
 						</select>
@@ -203,9 +209,10 @@
 					>
 						<input
 							type="text"
-							class="form-control row"
+							class="form-control row validate"
 							name="cidade"
 							id="cidade"
+							required
 						/>
 						<label for="cidade">Cidade</label>
 					</div>
@@ -221,8 +228,7 @@
 			</form>
 		</div>
 
-		<div class="container d-none p-3" id="menu-listar">
-			<div class="card bg-dark">
+		<div class="m-3 card bg-dark d-none p-3" id="menu-listar">
 				<div class="table-responsive">
 					<table class="p-3 table table-dark table-hover">
 						<thead>
@@ -249,7 +255,6 @@
 				<button id="btn-excluir" class="col-md-2 btn btn-danger rounded-3 m-2">
 					Excluir
 				</button>
-			</div>
 		</div>
 	</body>
 
