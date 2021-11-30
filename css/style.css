@@ -6,3 +6,21 @@ body {
     height: 100vh;
 	background-color: rgb(53, 21, 68);
 }
+
+a.nav-link {
+	cursor: pointer;
+}
+
+a.selected.nav-link {
+	color: white;
+	cursor: default;
+}
+
+#table-container {
+	overflow-x: auto;
+	border-radius: 5px;
+}
+
+#title {
+	align-self: start;
+}

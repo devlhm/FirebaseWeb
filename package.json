@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/devlhm/FirebaseWeb#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "firebase": "^9.4.0"
   },
   "devDependencies": {
